@@ -1,11 +1,12 @@
 import { TaskCard } from '@/components'
-import { API_URL } from '@/libs/config'
 import { Task } from '@/libs/definitions'
+import { prisma } from '@/libs/prisma'
 
 async function getTasks(): Promise<Task[]> {
-  const res = await fetch(`${API_URL}api/v1/tasks`)
-  const data = await res.json()
-  return data.message
+  // const res = await fetch(`${API_URL}api/v1/tasks`)
+  // const data = await res.json()
+  // return data.message
+  return await prisma.task.findMany()
 }
 
 export default async function Home() {

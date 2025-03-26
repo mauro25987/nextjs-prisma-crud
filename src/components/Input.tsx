@@ -1,7 +1,7 @@
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+// interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const Input: React.FC<InputProps> = ({ ...res }) => {
-  return <input {...res} />
+const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = props => {
+  return <input {...props} />
 }
 
 export { Input }

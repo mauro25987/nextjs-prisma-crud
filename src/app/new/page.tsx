@@ -18,7 +18,7 @@ function NewTaskPage() {
       }
       fetchTask()
     }
-  }, [])
+  }, [idTask])
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
