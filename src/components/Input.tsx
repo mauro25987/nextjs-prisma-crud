@@ -4,4 +4,4 @@ const Input: React.FC<InputProps> = ({ ...res }) => {
   return <input {...res} />
 }
 
-export default Input
+export { Input }

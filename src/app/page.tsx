@@ -1,7 +1,6 @@
-import TaskCard from '@/components/TaskCard'
+import { TaskCard } from '@/components'
 import { API_URL } from '@/libs/config'
 import { Task } from '@/libs/definitions'
-import Link from 'next/link'
 
 async function getTasks(): Promise<Task[]> {
   const res = await fetch(`${API_URL}api/v1/tasks`)
@@ -15,9 +14,7 @@ export default async function Home() {
     <section className="container mx-auto">
       <div className="mt-10 grid grid-cols-3 gap-3">
         {tasks.map(task => (
-          <Link href={`/task/${task.id}`} key={task.id}>
-            <TaskCard task={task} />
-          </Link>
+          <TaskCard key={task.id} task={task} />
         ))}
       </div>
     </section>

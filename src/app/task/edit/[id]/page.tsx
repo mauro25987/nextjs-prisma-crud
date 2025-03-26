@@ -1,3 +1,2 @@
-export default function TaskEdit() {
-  return 'asd'
-}
+import NewTaskPage from '@/app/new/page'
+export default NewTaskPage

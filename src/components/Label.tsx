@@ -6,4 +6,4 @@ const Label: React.FC<LabelProps> = ({ children, ...res }) => {
   return <label {...res}>{children}</label>
 }
 
-export default Label
+export { Label }

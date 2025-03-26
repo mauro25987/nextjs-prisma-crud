@@ -4,3 +4,5 @@ export type Task = {
   description: string
   createdAt: string
 }
+
+export type TaskEdit = Omit<Task, 'id' | 'createdAt'>
